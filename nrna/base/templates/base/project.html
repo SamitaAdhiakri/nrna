@@ -1,0 +1,57 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+
+<!-- BANNER -->
+<div
+  class="section banner-page"
+  data-background="{% static 'images/banner-single.jpg' %}"
+>
+  <div class="content-wrap pos-relative">
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <div class="title-page">Projects</div>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Projects</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- HOW TO HELP US -->
+<div class="section">
+  <div class="content-wrap">
+    <div class="container">
+      <div class="row">
+        {% for project in projects %}
+        <!-- Item 1 -->
+        <div class="col-sm-4 col-md-4">
+          <div class="box-fundraising">
+            <div class="media">
+              <img src="{{project.image.url}}" alt="" />
+            </div>
+            <div class="body-content">
+              <p class="title">
+                <a href="{% url 'project' project.id %}">{{project.name}}</a>
+              </p>
+              <div class="meta">
+                <span class="location"><i class="fa fa-map-marker"></i></span>
+              </div>
+              <div class="text">{{project.highlights}}</div>
+              <div class="spacer-30"></div>
+              <a href="events-single.html" class="btn btn-primary">READ MORE</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+
+<!-- FOOTER SECTION -->
+{% endblock %}

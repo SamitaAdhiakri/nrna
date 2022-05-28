@@ -1,0 +1,71 @@
+{% load static %}
+
+<div class="navbar-main">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo" src="{% static 'images/logo.jpg' %}" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="">HOME</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              ABOUT
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="">ABOUT US</a>
+              <a class="dropdown-item" href="">OUR TEAM</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">GALLERY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">NEWS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">EVENTS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="">CONTACT US</a>
+          </li>
+        </ul>
+        {% comment %} {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="btn btn-primary btn-nav ml-auto"
+          >Logout</a
+        >
+        {% else %}
+
+        <a href="{% url 'login' %}" class="btn btn-primary btn-nav ml-auto"
+          >LOGIN/REGISTER</a
+        >
+        {% endif %} {% endcomment %}
+        <a href="" class="btn btn-primary btn-nav ml-auto">LOGIN/REGISTER</a>
+      </div>
+    </nav>
+  </div>
+</div>

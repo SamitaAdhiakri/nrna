@@ -1,0 +1,132 @@
+{% extends 'main.html' %} {% block content %}{% load static %}
+
+<!-- BANNER -->
+<div class="section banner-page" data-background="images/banner-single.jpg">
+  <div class="content-wrap pos-relative">
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <div class="title-page">About Us</div>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="section">
+  <div class="content-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6">
+          <h2 class="section-heading">Welcome <span>To</span> Ngoo</h2>
+
+          {% for about in abouts %}
+          <p>{{about.description}}</p>
+          {% endfor %}
+          <div class="spacer-30"></div>
+          <a href="{% url 'teams' %}" class="btn btn-primary">MEET OUR TEAMS</a>
+          <div class="spacer-30"></div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+          <img
+            src="{% static 'images/about-img-2.jpg' %}"
+            alt=""
+            class="img-fluid img-border"
+          />
+        </div>
+      </div>
+
+      <div class="spacer-70"></div>
+
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <div class="rs-icon-funfact style-2">
+            <div class="icon">
+              <i class="fa fa-file-text-o"></i>
+            </div>
+            <div class="body-content">
+              <h2>12,280</h2>
+              <p class="uk18">Complete</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-3">
+          <div class="rs-icon-funfact style-2">
+            <div class="icon">
+              <i class="fa fa-users"></i>
+            </div>
+            <div class="body-content">
+              <h2>1,825</h2>
+              <p class="uk18">Our Team</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-3">
+          <div class="rs-icon-funfact style-2">
+            <div class="icon">
+              <i class="fa fa-trophy"></i>
+            </div>
+            <div class="body-content">
+              <h2>37</h2>
+              <p class="uk18">Awards</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-3">
+          <div class="rs-icon-funfact style-2">
+            <div class="icon">
+              <i class="fa fa-male"></i>
+            </div>
+            <div class="body-content">
+              <h2>256,861</h2>
+              <p class="uk18">Volunteer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- HOW TO HELP US -->
+<div class="section">
+  <div class="content-wrap">
+    <div class="container">
+      <div class="row">
+        {% for about_title in about_tiles %}
+        <!-- Item 1 -->
+        <div class="col-sm-4 col-md-4">
+          <div class="box-fundraising">
+             <div class="media">
+              
+              <img src="{{about_title.avatar.url}}" alt="" />
+            </div>
+            <div class="body-content">
+              <p class="title">
+                <a href="{% url 'about' about_title.id %}">{{about_title.title}}</a>
+              </p>
+              
+              </div>
+              <div class="text">{{about_title.description|slice:":100"}}...</div>
+              <div class="spacer-30"></div>
+              
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FOOTER SECTION -->
+{% endblock %}

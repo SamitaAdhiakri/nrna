@@ -1,0 +1,191 @@
+{% extends 'main.html' %} {% block content %}{% load static %}
+
+<!-- BANNER -->
+<div class="section banner-page" data-background="images/banner-single.jpg">
+  <div class="content-wrap pos-relative">
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <div class="title-page">News Detail</div>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            News Detail
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="section">
+  <div class="content-wrap">
+    <div class="container">
+      <div class="row">
+        {% comment %}
+        <div class="col-sm-3 col-md-3">
+          <div class="widget widget-text">
+            <div class="widget-title">Text Widget</div>
+            <p>
+              <strong
+                >NGOO is a clean, modern, and fully responsive HTML Template. it
+                is designed for charity, non-profit, fundraising, donation,
+                volunteer, businesses or any type of person or business who
+                wants to showcase their work, services and professional
+                way.</strong
+              >
+            </p>
+            <p>
+              Nam efficitur orci quis leo tincidunt, ac lacinia purus aliquet.
+              Nam pellentesque pretium nibh cursus diam dapibus a.
+            </p>
+          </div>
+
+          <div class="widget widget-archive">
+            <div class="widget-title">Archive</div>
+            <select class="form-control">
+              <option>April 2017</option>
+              <option>March 2017</option>
+              <option>February 2017</option>
+              <option>January 2017</option>
+            </select>
+          </div>
+
+          <div class="widget tags">
+            <div class="widget-title">Tags</div>
+            <div class="tagcloud">
+              <a href="#" title="3 topics">construction</a>
+              <a href="#" title="1 topic">industrial</a>
+              <a href="#" title="1 topic">company</a>
+              <a href="#" title="4 topics">development</a>
+              <a href="#" title="2 topics">manufacturing</a>
+              <a href="#" title="1 topic">mechanical</a>
+              <a href="#" title="2 topics">engineering</a>
+              <a href="#" title="1 topic">architecture</a>
+              <a href="#" title="2 topics">planning</a>
+              <a href="#" title="5 topics">assembly</a>
+              <a href="#" title="2 topics">themeforest</a>
+              <a href="#" title="1 topic">infrastructure</a>
+            </div>
+          </div>
+        </div>
+        {% endcomment %}
+        <div class="col-sm-9 col-md-9">
+          <div class="single-news">
+            <div class="image">
+              <img src="{{news.avatar.url}}" alt="" class="img-fluid" />
+            </div>
+            <h2 class="blok-title">{{news.title}}</h2>
+            <div class="meta">
+              <div class="meta-comment">
+                <i class="fa fa-comment-o"></i> {{comments.count}} Comment
+              </div>
+            </div>
+            <p>{{news.intro}}</p>
+
+            <blockquote>{{news.highlights}}</blockquote>
+            <div class="margin-bottom-50"></div>
+            <p><strong>News Details</strong></p>
+          </div>
+          <p>{{news.description}}</p>
+
+          <div class="comments-box">
+            <h4 class="title-heading">
+              Comments <span>{{comments.count}}</span>
+            </h4>
+
+            {% for comment in comments %}
+
+            <div class="media comment">
+              <img
+                class="mr-3"
+                alt="80x80"
+                src="{{user.avatar.url}}"
+                style="width: 64px; height: 64px"
+              />
+              <div class="media-body">
+                <h5 class="media-heading mt-0 mb-1">
+                  @<a href="{% url 'user-profile' request.user.id %}"
+                    >{{comment.user}}</a
+                  ><small class="date">{{comment.created|timesince}}ago</small>
+                  <small>
+                    {% if request.user == comment.user %}
+                    <a href="{% url 'delete-comment' comment.id  %}">Delete</a>
+                    {% endif %}
+                  </small>
+                </h5>
+                {{comment.body}}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="leave-comment-box">
+            <h4 class="title-heading">Leave Comments</h4>
+            {% if request.user.is_authenticated %}
+            <form method="POST" action="" class="form-comment">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-xs-12 col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      id="message"
+                      type="text"
+                      name="body"
+                      class="inputtext form-control"
+                      rows="6"
+                      placeholder="Comment..."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                  <div class="form-group">
+                    <button id="send" type="submit" class="btn btn-primary">
+                      Post Comment
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            {% else %}
+            <div class="col-xs-12 col-md-12">
+              <div class="form-group">
+                <a href="{% url 'login' %}">
+                  <button id="send" class="btn btn-primary">Login</button>
+                </a>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section cta">
+  <div class="content-wrap-20">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="cta-1">
+            <div class="body-text">
+              <h3>
+                Join your hand with us for a better life and beautiful future.
+              </h3>
+            </div>
+            <div class="body-action">
+              <a href="#" class="btn btn-secondary">DONATE NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER SECTION -->
+{% endblock %}

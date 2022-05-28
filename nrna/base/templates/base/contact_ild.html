@@ -1,0 +1,17 @@
+{% extends 'main.html' %} {% block content %}
+<h1>Contact Us</h1>
+
+<div>
+  <div>
+    {% for contact in contacts %}
+    <div>
+      <h5>
+        {{contact.id}} --
+        {{contact.name}}</a>
+      </h5>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <!-- Mirrored from html.rometheme.pro/ngoo/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Mar 2022 04:26:15 GMT -->
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NRNA Non-REsident Nepali Association</title>
+    <meta
+      name="description"
+      content="NGOO is a clean, modern, and fully responsive HTML Template. it is designed for charity, non-profit, fundraising, donation, volunteer, businesses or any type of person or business who wants to showcase their work, services and professional way."
+    />
+    <meta
+      name="keywords"
+      content="campaign, cause, charity, donate, donations, event, foundation, fund, fundraising, kids, ngo, non-profit, organization, volunteer"
+    />
+    <meta name="author" content="rometheme.net" />
+
+    <!-- ==============================================
+	Favicons
+	=============================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/apple-touch-icon-114x114.png"
+    />
+
+    <!-- ==============================================
+	CSS VENDOR
+	=============================================== -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/vendor/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/vendor/font-awesome.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/vendor/owl.carousel.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/vendor/owl.theme.default.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/vendor/magnific-popup.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/vendor/animate.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/vendor/bootstrap-dropdownhover.min.css' %}"
+    />
+
+    <!-- ==============================================
+	Custom Stylesheet
+	=============================================== -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+
+    <script src="{% static 'js/vendor/modernizr.min.js' %}"></script>
+  </head>
+
+  <body>
+    <!-- LOAD PAGE -->
+    <div class="animationload">
+      <div class="loader"></div>
+    </div>
+
+    <!-- BACK TO TOP SECTION -->
+    <a href="#0" class="cd-top cd-is-visible cd-fade-out">Top</a>
+
+    <!-- HEADER -->
+    <div class="header header-3">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-6">
+              <div class="info">
+                <div class="info-item">
+                  <span class="fa fa-envelope-o"></span>
+                  <a href="mailto:info@nrnaglobal.org" title=""
+                    ><strong>Mail:</strong> info@nrnaglobal.org</a
+                  >
+                </div>
+                <div class="info-item">
+                  <span class="fa fa-phone"></span><strong>Call Us:</strong>
+                  +14155044588
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-6">
+              <div class="sosmed-icon pull-right">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-6">
+              <div class="info">
+                <div class="info-item">
+                  <span class="fa fa-envelope-o"></span>
+                  <a href="mailto:info@nrnaglobal.org" title=""
+                    ><strong>Mail:</strong>तपन</a>
+                </div>
+                <div class="info-item">
+                  <span class="fa fa-phone"></span><strong>Call Us:</strong>
+                  +14155044588
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-6">
+              <div class="sosmed-icon pull-right">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAVBAR SECTION -->
+      <div class="navbar-main">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'home' %}">
+              <img class="logo" src="images/logo.jpg" alt="" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">HOME</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    ABOUT
+                  </a>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <a class="dropdown-item" href="{% url 'about' %}"
+                      >ABOUT US</a
+                    >
+                    <a class="dropdown-item" href="{% url 'teams'  %}"
+                      >OUR TEAM</a
+                    >
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'gallery' %}">GALLERY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'news' %}">NEWS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'project' %}">PROJECT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'events' %}">EVENTS</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">CONTACT US</a>
+                </li>
+              </ul>
+              {% if request.user.is_authenticated %}
+              <a
+                href="{% url 'logout' %}"
+                class="btn btn-primary btn-nav ml-auto"
+                >Logout</a
+              >
+
+              <li class="nav-item">
+                <a class="nav-link" href=" {% url 'user-profile' user.id %} "
+                  >@{{user}}</a
+                >
+              </li>
+              {% else %}
+
+              <a
+                href="{% url 'login' %}"
+                class="btn btn-primary btn-nav ml-auto"
+                >LOGIN/REGISTER</a
+              >
+              {% endif %} {% comment %}
+              <a
+                href="{% url 'register' %}"
+                class="btn btn-primary btn-nav ml-auto"
+                >LOGIN/REGISTER</a
+              >
+              {% endcomment %}
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    {% block content %} {% endblock %}
+    <!-- CTA -->
+    <div class="section cta">
+      <div class="content-wrap-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <div class="cta-1">
+                <div class="body-text">
+                  <h3>
+                    Join your hand with us for a better life and beautiful
+                    future.
+                  </h3>
+                </div>
+                <div class="body-action">
+                  <a href="#" class="btn btn-secondary">DONATE NOW</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div class="footer" data-background="images/bg-map-dot.jpg">
+      <div class="content-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3 col-md-3">
+              <div class="footer-item">
+                <img
+                  src="images/logo.jpg"
+                  alt="logo bottom"
+                  class="logo-bottom"
+                />
+                <div class="spacer-30"></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum
+                  dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy.
+                </p>
+                <a href="#"><i class="fa fa-angle-right"></i> Read More</a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-3">
+              <div class="footer-item">
+                <div class="footer-title">WHO WE ARE</div>
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <ul class="list">
+                      <li>
+                        <a href="{% url 'about' %}" title="About us">About us</a>
+                      </li>
+                      <li><a href="{% url 'gallery' %}" title="Gallery">Gallery</a></li>
+                      <li>
+                        <a href="{% url 'news' %}" title="News"
+                          >News</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{% url 'events' %}" title="Event">Events</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6 col-md-6">
+                    <ul class="list">
+                      <li>
+                        <a href="{% url 'teams' %}" title="Our Team">Our Team</a>
+                      </li>
+                      
+                      <li>
+                        <a href="{% url 'contact' %}" title="Contact Us">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-3">
+              <div class="footer-item">
+                <div class="footer-title">WHERE WE WORK</div>
+                <ul class="list-info">
+                  <li>
+                    <div class="info-icon">
+                      <span class="fa fa-map-marker"></span>
+                    </div>
+                    <div class="info-text">Kathmandu, Nepal</div>
+                  </li>
+                  <li>
+                    <div class="info-icon">
+                      <span class="fa fa-phone"></span>
+                    </div>
+                    <div class="info-text">+14155044588</div>
+                  </li>
+                  <li>
+                    <div class="info-icon">
+                      <span class="fa fa-envelope"></span>
+                    </div>
+                    <div class="info-text">info@nrna.org</div>
+                  </li>
+                  <li>
+                    <div class="info-icon">
+                      <span class="fa fa-clock-o"></span>
+                    </div>
+                   
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-3">
+              <div class="footer-item">
+                <div class="footer-title">FOLLOW US</div>
+                <p>
+                  Lit sed The Best in dolor sit amet consectetur adipisicing
+                  elit sedconsectetur adipisicing
+                </p>
+                <div class="sosmed-icon primary">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fcopy">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <p class="ftex">
+                Copyright 2022 &copy;
+                <span class="color-primary">NRNA 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS VENDOR -->
+    <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/vendor/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- SENDMAIL -->
+    <script src="{% static 'js/vendor/validator.min.js' %}"></script>
+    <script src="{% static 'js/vendor/form-scripts.js' %}"></script>
+
+    <!-- MAIN JS -->
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+
+  <!-- Mirrored from html.rometheme.pro/ngoo/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Mar 2022 04:26:18 GMT -->
+</html>

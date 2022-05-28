@@ -1,0 +1,54 @@
+{% extends 'main.html' %} {% block content %}{% load static %}
+
+<!-- BANNER -->
+<div
+  class="section banner-page"
+  data-background="{% static 'images/banner-single.jpg' %}"
+>
+  <div class="content-wrap pos-relative">
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <div class="title-page">News Grid</div>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">News Grid</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="section">
+  <div class="content-wrap">
+    <div class="container">
+      <div class="row">
+        {% for new in news %}
+        <div class="col-sm-6 col-md-4">
+          <!-- BOX 1 -->
+          <div class="box-news-1">
+            <div class="media gbr">
+              <img src="{{new.avatar.url}}" alt="" class="img-fluid" />
+            </div>
+            <div class="body">
+              <div class="title">
+                <a href="{% url 'news' new.id %}" title="">{{new.title}} </a>
+              </div>
+              <div class="meta">
+                <span class="date"
+                  ><i class="fa fa-clock-o"></i> Apr 25, 2017</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER SECTION -->
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'main.html' %} {% block content %}{% load static %}
+
+<!-- BANNER -->
+<div class="section banner-page" data-background="images/banner-single.jpg">
+  <div class="content-wrap pos-relative">
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <div class="title-page">Our Team</div>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Our Team</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- HOW TO HELP US -->
+<div class="section">
+  <div class="content-wrap">
+    <div class="container">
+      <div class="row">
+        {% for team in teams %}
+        <div class="col-sm-3 col-md-3">
+          <div class="rs-team-1">
+            <div class="media">
+              <img src="{{team.avatar.url}}" alt="" />
+            </div>
+            <div class="body">
+              <div class="title">{{team.name}}</div>
+              <div class="position">{{team.position}}</div>
+              <ul class="social-icon">
+                <li>
+                  <a href="#"><span class="fa fa-facebook"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="fa fa-twitter"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="fa fa-google-plus"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="row">
+        <div class="cta-info">
+          <h1 class="section-heading center">Join <span>Our</span> Team?</h1>
+          <p>
+            Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste
+            natus error
+          </p>
+          <div class="spacer-50"></div>
+          <a href="#" class="btn btn-primary margin-btn">LEARN MORE</a>
+          <a href="#" class="btn btn-secondary margin-btn">JOIN US NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
